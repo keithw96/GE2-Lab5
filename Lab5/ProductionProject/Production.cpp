@@ -8,12 +8,12 @@
 /// <returns></returns>
 bool Production::range(std::vector<int> v)
 {
+	bool inRange = true;
+
 	if (v.size() == 0)
 	{
-		return false;
+		inRange = false;
 	}
-
-	bool inRange = true;
 
 	for (auto number : v)
 	{
@@ -45,12 +45,12 @@ bool Production::duplicates(std::vector<int> v)
 /// <returns></returns>
 bool Production::arraySize(std::vector<int> v)
 {
-	bool size = true;
-
-	if (v.size() != 6)
+	if (v.size() == 6)
 	{
-		size = false;
+		return true;
 	}
-
-	return size;
+	else
+	{
+		return false;
+	}
 }
